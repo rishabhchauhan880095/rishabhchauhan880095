@@ -1,54 +1,9 @@
-# Real Estate Price Prediction Project
+# UCI_credit_card_default
 
-## Introduction
-Creating a Machine Learning model to predict the home prices in Bangalore, India. We are going to use the dataset from Kaggle.com.
-We are also going to create a single page website which will provide the front end to access our model for predictions.
+I analyse the UCI credit card default dataset available at: https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients#.
 
-Below data science concepts are used in this project
-* Data loading and cleaning
-* Outlier detection and removal
-* Feature engineering
-* Dimensionality reduction
-* Gridsearchcv for hyperparameter tunning
-* K fold cross validation
+The dataset is details of credit card holders of an "important bank in Taiwan" for the period April to September, 2005. The features available include some basic customer demographics (gender, education, marital status and age), available credit line, their history of payment/default for the six months mentioned (Apr--Sep '05), their bill amounts and their payment amounts for that period and a binary target variable indicating default the following month.
 
-Technology and tools used in this project
-* Python
-* Numpy and Pandas for data cleaning
-* Matplotlib for data visualization
-* Sklearn for model building
-* Google Colaboratory Notebook
-* Python flask for http server
-* HTML/CSS/Javascript for UI
+The data was originally studied by the authors of the paper: Yeh, I. C., & Lien, C. H. (2009). The comparisons of data mining techniques for the predictive accuracy of probability of default of credit card clients. Expert Systems with Applications, 36(2), 2473-2480.
 
-## Steps
-1. We will first build a model using sklearn and linear regression using banglore home prices dataset from kaggle.com.
-2. Second step would be to write a python flask server that uses the saved model to serve http requests.
-3. Third component is the website built in html, css and javascript that allows user to enter home square ft area, bedrooms etc and it will call python flask server to retrieve the predicted price. 
-
-  ```
-  Step#1: Import the required libraries
-  Step#2: Load the data
-  Step#3: Understand the data
-          -drop unnecessary columns
-  Step#4: Data Cleaning
-          - Check for na values
-          - Verify unique values of each column
-          - Make sure values are correct (eg. 23 BHK home with 2000 Sqrft size is worng)
-          - Feature Engineering
-          - Dimesionality Reduction
-          - Outlier removal using domain knowledge (2bhk price < 3bhk price, size per bhk >= 300 sqft)
-          - Outlier removal using standard eviation and mean
-          - One Hot encoding
-  Step#5: Build Machine Learning Model
-  Step#6: Testing The model
-  Step#7: Export the model
-  Step#8: Export any other important info
-  ```
-
-## Dataset Reference
-* [Bengaluru House price data](https://www.kaggle.com/amitabhajoy/bengaluru-house-price-data)
-* I have also uploaed the csv file in this repository [Bengaluru_House_Data.csv](Bengaluru_House_Data.csv)
-
-Reference
-[codebasics](https://youtu.be/rdfbcdP75KI)
+I  perform some EDA to understand the data and clean the data, engineer relevant features, build predictive models to predict default and perform some statistical analyses to obtain a greater understanding of the features and their interactions. I finish with some business case scenarios where the predictive model could be applied.
